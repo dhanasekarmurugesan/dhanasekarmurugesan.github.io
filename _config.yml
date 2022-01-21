@@ -1,1 +1,10 @@
+title: Dhanasekar Murugesan # your name (or website title) here
+description: > # your text below (remove <br> elements if you don't need line breaks)
+ IT Technical Solutions Lead .NET
+  <br><br>
+  <a href="mailto:beingdhanasekar@gmail.com">beingdhanasekar@gmail.com </a>
+  <br>
+  <a href="https://www.linkedin.com/in/dhanasekarmurugesan/">LinkedIn Profile</a>
+  <br>
+  <a href="https://www.gihub.com/M-Dhanasekar/">Gihub</a> 
 theme: jekyll-theme-minimal
