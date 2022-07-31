@@ -3,8 +3,6 @@
 
 I am a .NET technical lead and solutions consultant with an experience of over 12 years. I have hands on experience working with .NET and Core frameworks and technologies. Consistently recognized for excellent planning and organizational skills and meeting tight deadlines. Idea generator and problem solver who works well with customers, co-workers and all levels of management. Thrives in a continuously learning environment.
 
-[Dhanasekar Murugesan](https://in.linkedin.com/in/dhanasekarmurugesan?trk=profile-badge)
-
 ---
 
 ## Domains & Skill Classification
