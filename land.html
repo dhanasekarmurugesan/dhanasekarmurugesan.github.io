@@ -1,11 +1,167 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>My GitHub Pages Site</title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+	<link  href="https://fonts.googleapis.com/css?family=Rock+Salt"   rel="stylesheet"   type="text/css" />
+	<style>
+			/* spacing */
+
+		table {
+		  table-layout: fixed;
+		  width: 100%;
+		  border-collapse: collapse;
+		  border: 3px solid purple;
+		}
+
+		thead th:nth-child(1) {
+		  width: 30%;
+		}
+
+		thead th:nth-child(2) {
+		  width: 20%;
+		}
+
+		thead th:nth-child(3) {
+		  width: 15%;
+		}
+
+		thead th:nth-child(4) {
+		  width: 35%;
+		}
+
+		th,
+		td {
+		  padding: 20px;
+		}
+		
+		/* typography */
+
+		html {
+		  font-family: "helvetica neue", helvetica, arial, sans-serif;
+		}
+		
+		thead th,
+		tfoot th {
+		  font-family: "Rock Salt";
+		}
+
+		th {
+		  letter-spacing: 2px;
+		}
+
+		td {
+		  letter-spacing: 1px;
+		}
+
+		tbody td {
+		  text-align: center;
+		}
+
+		tfoot th {
+		  text-align: right;
+		}
+		
+		/* graphics and colors */
+
+		thead,
+		tfoot {		 
+		  color: white;
+		  text-shadow: 1px 1px 1px black;
+		}
+
+		thead th,
+		tfoot th,
+		tfoot td {
+		  background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0.5)
+		  );
+		  border: 3px solid purple;
+		}
+		
+		/* zebra striping */
+
+		tbody tr:nth-child(odd) {
+		  background-color: #ff33cc;
+		}
+
+		tbody tr:nth-child(even) {
+		  background-color: #e495e4;
+		}
+
+		tbody tr {
+		  background-image: url(noise.png);
+		}
+
+		table {
+		  background-color: #ff33cc;
+		}
+		
+		/* caption */
+		caption {
+		  font-family: "Rock Salt", cursive;
+		  padding: 20px;
+		  font-style: italic;
+		  caption-side: bottom;
+		  color: #666;
+		  text-align: right;
+		  letter-spacing: 1px;
+		}
+		
+	</style>
+
   </head>
+  <script>
+  $(document).ready(function(){
+		
+		var endpoint = 'latest', accesskey='03qhsw0l6ye0de0ufxcvi63jclcbu4itx2p45q3bhv9pfw25kn9fd716pmnm',
+		baseCurrency='INR',  symbolsToQuery='XAU',
+		conversionRateFromXAU=31.103;
+		
+		$.ajax({
+			cache: false,
+			url: 'https://metals-api.com/api/' + endpoint + '?access_key=' + accesskey+'&base='+baseCurrency+'&symbols='+symbolsToQuery,   
+			dataType:'json',
+			success: function(result){
+				var definedValue = result.rates.XAU;
+				
+				var finalRate = definedValue/conversionRateFromXAU;
+				
+				$('#goldRate22k').html(finalRate.toFixed(2));
+			},
+			error: function(xHR, textStatus, errorThrown){
+			console.log(xHR);
+			console.log(textStatus);
+			console.log(errorThrown);
+			}
+		});
+		
+		
+  });
+  </script>
   <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my GitHub Pages site!</p>
+    <h1>Rates Global</h1>
+	<table>
+  <caption>
+    Rates and Conversions at a glance
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Aspect</th>
+      <th scope="col">Rate (INR) without GST</th>      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Gold (22K)</th>
+      <td id="goldRate22k"></td>     
+    </tr>    
+    
+  </tbody>  
+</table>
   </body>
 </html>
 
