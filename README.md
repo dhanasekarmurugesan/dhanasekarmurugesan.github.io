@@ -1,7 +1,7 @@
 
 ## Portfolio
 
-I am a .NET technical lead and solutions consultant with an experience since 2009. I have hands on experience working with .NET and Core frameworks and technologies. Consistently recognized for excellent planning and organizational skills and meeting tight deadlines. Idea generator and problem solver who works well with customers, co-workers and all levels of management. Thrives in a continuously learning environment.
+I am a solutions consultant specialized in Cloud Native Apps with an experience since 2009. I have hands on experience working with .NET and Core frameworks and technologies. Consistently recognized for excellent planning and organizational skills and meeting tight deadlines. Idea generator and problem solver who works well with customers, co-workers and all levels of management. Thrives in a continuously learning environment.
 
 ---
 
